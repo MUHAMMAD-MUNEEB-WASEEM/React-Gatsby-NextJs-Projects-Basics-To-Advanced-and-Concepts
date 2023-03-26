@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(246, 225, 203, 0.77);/*greyish background*/
+    background-repeat: no-repeat;
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;/*put chart in center*/
+    margin-bottom:50px;
+}
+.image {
+    width: 370px;
+    margin-top: 50px;
+}
+.centre{
+    text-align: center;
+}
+/*for responsiveness*/
+@media (max-width:770px){
+    .container {
+        margin:2% 10%;
+    }
+    .image{
+        width:100%;
+    }
+    .headfoot{
+        width:100%;;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "netlify-todo-fauna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hammad131/netlify-todo-fauna.git",
+  "author": "hammad131 <74175920+hammad131@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ]
+}

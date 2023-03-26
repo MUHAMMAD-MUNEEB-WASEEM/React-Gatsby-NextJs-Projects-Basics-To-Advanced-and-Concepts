@@ -1,0 +1,9 @@
+in every website folder create cname first so we can update our surge website when require
+
+open cmd in current or website folder
+
+->echo site-name.surge.sh >CNAME
+
+The above is the command, just replace site name with your site name like in Redstore.surge.sh, site-name is Redstore
+
+Then you just need to open cmd in that folder and write surge . whenever update required.

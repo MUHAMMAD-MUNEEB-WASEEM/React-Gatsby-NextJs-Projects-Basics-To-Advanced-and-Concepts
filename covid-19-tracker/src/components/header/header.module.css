@@ -1,0 +1,25 @@
+.image{
+    width: 60px;
+    height: 60px;
+    margin-right:1%;
+}
+.background{
+    background-color: #ea5d2c;
+    background-image: linear-gradient(62deg, #ea5d2c 0%, #febf28 100%);
+
+}
+.font{
+    font-weight: bolder !important;
+}
+@media (max-width:770px){
+    .image{
+        width: 35px;
+        height: 35px;
+        margin-right:1%;
+        margin-left:0;
+    }
+    .font{
+        font-weight: bolder !important;
+        font-size: 20px !important;
+    }
+}

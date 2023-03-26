@@ -1,0 +1,17 @@
+1. build account
+2. create component collection
+3.install bit cli 
+	npm install bit-bin --global
+
+4.after that run bit
+5.bit login
+6.after that run this command
+	bit init
+7.bit add src/components/------
+8.checked bit status
+9.after that run this command
+	bit import -c bit.envs/compilers/react-typescript@3.1.61
+10.bit build
+11.bit tag --all 0.0.1
+12.bit export organizationname.collectionname
+13. all files should be come with status ok

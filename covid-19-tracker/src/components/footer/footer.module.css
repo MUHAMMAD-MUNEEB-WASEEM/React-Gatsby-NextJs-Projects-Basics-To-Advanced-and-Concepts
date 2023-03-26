@@ -1,0 +1,87 @@
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #ea5d2c;
+    background-image: linear-gradient(62deg, #ea5d2c 0%, #febf28 100%);
+    color: white;
+    text-align: center;
+}
+
+.heading{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.social{
+    padding-right: 1%;
+    display: inline;
+
+    justify-content: space-between;
+}
+.fa {
+    padding: 15px 25px;
+    height: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+  
+  /* Add a hover effect if you want */
+.fa:hover {
+opacity: 0.7;
+}
+  
+/* Set a specific color for each brand */
+  
+/* Facebook */
+.facebook {
+    background: #EB612C;
+    color: white;
+    margin-right: 1.5%;
+}
+.linked {
+    background: #EB612C;
+    color: white;
+    margin-right: 1.5%;
+}
+.github {
+    background: #EB612C;
+    color: white;
+    margin-right: 1.5%;
+}  
+  /* Twitter */
+.fa-twitter { 
+    background: #EB612C;
+    color: white;
+    margin-right: 1%;
+}
+
+@media (max-width:770px){
+    .footer{
+        width: 100%;
+    }
+    .heading{
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+    }
+    .fa {
+        padding: 10px 15px;
+        height: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        width: 5px;
+        text-align: center;
+        text-decoration: none;
+    }
+     
+}

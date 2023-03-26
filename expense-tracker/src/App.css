@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;/*to put border below Transaction History heading*/
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;/*use to put Income column and Expense column side by side, otherwise in next line, not side by side*/
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1; /*use to create small center line between income and expense*/
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede; /*put small line(vertical) after income*/
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ECC71;
+  font-weight: bold;
+}
+
+.money.minus {/*put dot b/w money and minus as written className money minus not money-minus*/
+  color: #C0392B;
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: lightsteelblue;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 5px;
+}
+
+.list {
+  list-style-type: none;/*to remove bullets*/
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ECC71;/*right border of transaction plus*/
+}
+
+.list li.plus:hover {
+  border-right: 5px solid #2ECC71 ;/*highlights transaction history upon hovering with green color*/
+  background-color: #2ECC71;
+  color: #f7f7f7;
+}
+
+.list li.minus {
+  border-right: 5px solid #C0392B; /*right border of transaction minus*/
+}
+
+.list li.minus:hover {
+  border-right: 5px solid #C0392B; /*highlights transaction history upon hovering with red color*/
+  background-color: #C0392B;
+  color: #f7f7f7
+}
+
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #8a6a66;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-140%, -50%);/*position X*/
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}

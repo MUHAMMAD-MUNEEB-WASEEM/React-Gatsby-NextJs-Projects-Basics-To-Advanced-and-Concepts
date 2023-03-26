@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shape{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function (){
+            var shapeElement = document.querySelector(".shape");//selects shape property
+            var frames = [
+                {background: "red", transform:"translateX(0px)"},
+                {background: "blue"},
+                {background: "yellow", transform: "translateX(600px)"}
+            ];//define frames
+            var timing = {
+                duration: 2000,
+                iterations: Infinity,
+                direction: "alternate"
+            }//define timing
+            var shapeAnimate = shapeElement.animate(frames, timing);//pass two parameters to animate method and app on shap
+        
+            document.querySelector(".play").addEventListener("click", function(){
+                shapeAnimate.play();
+            });
+
+            document.querySelector(".pause").addEventListener("click", function(){
+                shapeAnimate.pause();
+            });
+
+            document.querySelector(".reverse").addEventListener("click", function(){
+                shapeAnimate.reverse();
+            });
+
+
+            document.querySelector(".updateplaybackrate").addEventListener("click", function(){
+                shapeAnimate.updatePlaybackRate(shapeAnimate.playbackRate*1.2);
+            });
+        
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="shape">
+    </div>
+    <button class="play">Play</button>
+    <button class="pause">Pause</button>
+    <button class="reverse">Reverse</button>
+    <button class="updateplaybackrate">updateplaybackrate</button>
+</body>
+</html>
